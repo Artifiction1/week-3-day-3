@@ -119,8 +119,11 @@ The user should be able to see the list of tasks, add new ones, delete existing 
                onchange event listener ad applies it as background to every list item
             */
            function changeTaskBackgroundColor(){
-             let list = document.getElementsByName('li')
-             list.style.backgroundColor("Red")
+             let list = document.getElementsByTagName('ul')
+             let tone = document.getElementById("colorPicker").value
+             for (color of list){
+             color.style.backgroundColor = tone
+             }
            }
       /* EXTRA */
 
