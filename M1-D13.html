@@ -20,7 +20,7 @@ The user should be able to see the list of tasks, add new ones, delete existing 
     -->
     <style>
       .listBackground {background-color: purple}
-      .listFormat {font-weight: bold; font-size: 16pt; border: solid}
+      .listFormat {font-weight: bold; font-size: 16pt; border: solid; margin-top: 20px; margin-bottom: 20px;}
       button {height: 2cm; width: 8cm;}
       .button {height: 2cm; width: 8cm;}
       /* EXERCISE 2:  
@@ -82,6 +82,8 @@ The user should be able to see the list of tasks, add new ones, delete existing 
            let liList = document.createElement('li')
            liList.innerText = val
            ulList.appendChild(liList)
+           liList.classList.add('listBackground')
+           liList.classList.add('listFormat')
            }
       /* EXERCISE 6: 
                 Create a method "removeLast" which removes the last item from the task list
@@ -119,7 +121,7 @@ The user should be able to see the list of tasks, add new ones, delete existing 
                onchange event listener ad applies it as background to every list item
             */
            function changeTaskBackgroundColor(){
-             let list = document.getElementsByTagName('ul')
+             let list = document.getElementsByTagName('li')
              let tone = document.getElementById("colorPicker").value
              for (color of list){
              color.style.backgroundColor = tone
