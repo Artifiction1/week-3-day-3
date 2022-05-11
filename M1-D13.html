@@ -66,7 +66,7 @@ The user should be able to see the list of tasks, add new ones, delete existing 
 
     <hr />
 
-    <input class="button" type="button" value="Sort" onclick="bubblesort()" />
+    <input class="button" type="button" value="Sort" onclick="bubbleSort()" />
 
     <script>
       /* EXERCISE 5: 
@@ -129,7 +129,7 @@ The user should be able to see the list of tasks, add new ones, delete existing 
            }
       /* EXTRA */
 
-      /* EXERCISE 10: 
+      /* EXERCISE 10:
                Create a method "bubbleSort()" which sorts the task list alphabetically using the bubble sort algorithm
             
                Use your spare time to beautify your task list with CSS.
@@ -138,6 +138,22 @@ The user should be able to see the list of tasks, add new ones, delete existing 
                - Break the code into many function for semplicity 
                - Reuse the functions previously created
             */
+            function bubbleSort(){
+            let liar = document.getElementById('myTaskList')
+            let tasks = document.getElementsByTagName('li')
+            let i = 0
+            let x = ""
+            let y = ""
+            while (i<tasks.length){
+              let j = 0
+            while(j < tasks.length - i - 1){
+            if (tasks[j].innerText > tasks[j + 1].innerText){
+            let x = tasks[j].innerText
+            let y = tasks[j+1].innerText
+            tasks[j].innerText = y
+            tasks[j+1].innerText = x
+            }j++
+            }i++}}
     </script>
   </body>
 </html>
